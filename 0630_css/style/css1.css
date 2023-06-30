@@ -1,0 +1,64 @@
+/* 로컬글꼴 연결법 */
+/* 웹글꼴 연결법 */
+/* 구글폰트접속 ->글꼴선택 
+->link or import 글꼴주소가져오기
+->font-family로 글꼴연결 */
+dl {
+    font-size:2rem;/* 32px */
+    font-size:3rem;
+}
+dl dt {
+    background-color:rgba(0,255,255,0.7);
+    font-size:1.5rem;
+    color:rgba(0,0,0,0.5);
+}
+dl dt em {
+    display:none;
+    background-color:#000; color:#fff;
+    font-family: 'Gugi', cursive;
+}
+dl dd {
+    background-color: lightblue;
+}
+dl dd span {
+    display:block;
+    background-color:#000; color:#fff;
+}
+.f12 {
+    display:inline;
+    background-color: lightcoral;
+    word-spacing:0.05em;
+    letter-spacing:-0.02em;/*-2%*/
+    font-size:1.25rem;/* 20px */
+    line-height:1.5; /* 1.0==100% */
+    /* font-size의 px값 기준 설정이 불편할 경우
+    상대값 기준으로 line-height을 처리한다.(100%기준) -> figma를 무시하게 됨*/
+    /* line-height:80px; */
+    /* line-height를 px로 작성할 경우는 
+    font-size의 px값 기준으로 값이 결정된다. */
+    /* 상대값으로 쓸경우-사이트연습, 포폴제작등 빠른처리를위해.간단하게 사용할때 사용 */
+    /* 절값으로 쓸경우- 프로젝트, 대기업 등에서 팀작업할때 주로 사용  */
+}
+.overflow{
+    background-color:rgba(0,0,0,0.2);
+    font-size:1.25rem;
+    width:400px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+#a {
+    background-color: beige;
+    width:500px; height:500px;
+    margin-left:20px;
+    padding-top:20px;
+}
+#a #b {
+    margin:20px 10px 0;
+    border:5px solid blue;
+    font-size:5rem;
+    background-color:lightsalmon;
+    width:50%; height:300px;
+    /* 부모의 크기는 제한이 없다.
+자식 요소의 크기를 입력시에는 반드시 부모요소보다 작거나 같아야 한다. */
+}
