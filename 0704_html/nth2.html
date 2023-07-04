@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth2</title>
+    <style>table,th,td{border-collapse: collapse;
+    border:1px solid black;}
+        #t {text-align: center;
+            
+
+        }
+        #t thead {}
+        #t thead tr {}
+        #t thead tr th {padding:10px}
+        #t thead tr th:nth-child(1) {background-color: yellow;}
+        #t thead tr th:nth-child(1) {}
+
+        #t tbody  {}
+        #t tbody tr td {padding:10px}
+        #t tbody tr:nth-child(1) td:nth-child(1) {}
+        #t tbody tr:nth-child(1) td:nth-child(2) {background-color: pink;}
+        #t tbody tr:nth-child(2) td:nth-child(1) {background-color: aqua;}
+        #t tbody tr:nth-child(2) td:nth-child(2) {}
+        #t tbody tr:nth-child(3) td:nth-child(1) {}
+        #t tbody tr:nth-child(3) td:nth-child(2) {background-color: greenyellow;}
+
+    </style>
+</head>
+<body>
+    <table id="t">
+        <thead>
+            <tr>
+                <th scope="col">HTML5</th>
+                <th scope="col">CSS3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Header</td>
+                <td>nth-child</td>
+            </tr>
+            <tr>
+                <td>Header</td>
+                <td>display</td>
+            </tr>
+            <tr>
+                <td>Header</td>
+                <td>border</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,282 @@
+/* header */
+header {
+    width:1200px; height:92px;
+    margin:0 auto;
+}
+header h1 {
+    width:60px; height:70px;/* img부모 px */
+    float:left;
+    margin:11px 0 0 140px;
+}
+header h1 a {}
+header h1 a img {width:100%}
+/* img태그는 인라인요소지만  px크기를 절대값으로 가진다.
+그래서 부모요소의 크기가 변경되고 자동으로 따라오지 않기 때문에 width:100% 속성으로
+상대값으로 변경하여 부모의 px을 상대적으로 인식하게 경우가 많다 */
+
+/* header nav {} */
+header nav {
+    margin:39px 0 0 240px;
+    float:left;}
+header nav ul {}
+header nav ul li {float:left;}
+header nav ul li a {
+    padding-right:40px;
+    font-size:1.2rem;}
+header nav ul li:last-child a {padding-right:0;}
+header nav ul .active a {color:#36b4e5;}
+/* 활성화 페이지 기준 active class 선택자 작성위치 */
+header .lnb {
+    float:right;
+    margin:39px 20px 0 0;
+}
+
+header .lnb ul {}
+header .lnb ul li {
+    float:left;
+    margin-right:20px;
+}
+/* 모든 li에 반복적으로 들어간 margin, 또는 padding
+값에서 마지막 여백값만 빼는 방법 */
+header .lnb li:last-child{margin-right:0;}
+header .lnb ul li a {
+    font-size:1.2rem;
+}
+header .lnb ul li span {
+    width:1px; height:13px;
+    background-color:#aaa;
+    display:block;
+    margin-top:3px;
+}
+/* main {} */
+main {}
+main .breadcrumbs_bg {background-color:#f1f1f1;
+    border:1px solid #aaa;
+    border-left:0;
+    border-right:0; 
+    /* border:1px solid #aaa;
+    border-bottom:1px solid #aaa; - 방법2 */
+}
+main .breadcrumbs_bg .breadcrumbs {
+    width:1220px; height: 58px;
+    margin:0 auto; 
+    /* 정렬대상의 부모에게 값 주기→ 정렬대상이 모두 인라인이고 한 방향 수평 정렬일 경우 정렬대상의 부모요소한테 text-align을 사용한다. */
+    text-align:right;
+    padding:22px 20px;
+    }
+
+main .breadcrumbs_bg .breadcrumbs a {}
+main .breadcrumbs_bg .breadcrumbs em {
+    font-weight:700;}
+/* main .contents1  경영이념*/
+main .contents1 {
+    /* width:1200px; height:218px;
+    padding: 70px 0;   --> x */
+    width:1200px;
+    padding:70px 0;
+    margin:0 auto;
+    text-align:center;
+}
+main .contents1 h1 {
+    font-size:2.074rem;
+    font-weight:500;
+    letter-spacing: -0.02em;
+    margin-bottom:40px;
+}
+main .contents1 p {
+    font-size:1.2rem;
+    letter-spacing: -0.02em;
+
+}
+main .c2_bg {background-color:#f1f1f1;
+
+}
+main .c2_bg .contents2 {
+    width:1200px;
+    padding:70px 0;
+    margin:0 auto;
+
+}
+main .c2_bg .contents2 p {
+    text-align:center;
+    letter-spacing:-0.02em;
+    line-height:35px;
+    
+}
+/* main .contents3 비전영역 */
+main .content3 {
+    width:1200px;padding:70px 0;
+    margin: 0 auto; 
+    text-align:center;
+    
+}
+main .content3 h2 {
+    color:#36b4e5;
+    margin-bottom:50px;
+    font-size:2.074rem;
+    font-weight:500;
+    letter-spacing:-0.02em;}
+main .content3 h2+p {
+    font-size:1.728rem;
+    line-height:45px;
+    letter-spacing:-0.02em;
+}
+
+
+main .content3 p:nth-child(2){margin-bottom:50px;} 
+/* 자식 순서 확실히 집어낼때 사용 */
+main .c4_bg {background-color:#f1f1f1;}
+main .c4_bg .contents4 {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding:70px 0 ;
+}
+
+main .c4_bg .contents4 h2 {
+    font-size: 2.074rem;
+    padding:60px 0;
+
+}
+/* goal ul-li */
+main .c4_bg .contents4 ul:nth-child(2) {
+
+
+}
+main .c4_bg .contents4 ul:nth-child(2) li {   
+    background-color: #fff;
+    width:250px; height:250px;
+    border-radius:50%;
+    display:inline-block;/* 옆으로 나열 */
+    line-height:250px; /* 한 줄일때 값을 똑같이줌 - 가운데 정렬 */
+    margin-left: -15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+}
+main .c4_bg .contents4 ul:nth-child(2) li:nth-child(1) {
+    background-color:#36b4e5;
+}
+main .c4_bg .contents4 ul:nth-child(2) li:nth-child(3) {
+    background-color: #f3c300 ;
+}
+
+/* strategy ul-li */
+main .c4_bg .contents4 ul:nth-child(4) {
+   
+}
+main .c4_bg .contents4 ul:nth-child(4) li { background-color: #fff;
+    width:180px; height:180px; /* 1. 크기를준다 */
+    display:inline-block; /* 2. 옆으로 나열해준다 */
+    border-radius:50%;/* 3. 원으로 만들어준다 */
+    padding-top:61px;/* 4. 글씨를 가운데 정렬해준다.2줄 이상이니까 padding-top으로  */
+    margin-left:-10px; /* 5. 도형 겹친부분 값준다. */
+    /* box-shadow: X Y Blur Color; 그림자*/ 
+    box-shadow: 0 0 15px rgba(0,0,0,0.15); 
+
+}
+main .c4_bg .contents4 ul:nth-child(4) li h3 {
+    
+}
+main .c4_bg .contents4 ul:nth-child(4) li p {padding-top: 5px;
+    
+}
+
+
+/* main .c4_bg .contents4 ul {display: inline-block;}
+main .c4_bg .contents4 ul .box{
+    border-radius:50%;
+    text-align:center;
+    width:250px; height:250px;
+    font-size:2.074rem;
+    line-height:250px;
+    float:left;
+    
+
+}
+main .c4_bg .contents4 ul .a {
+    background-color:#36b4e5;
+    float:left;
+
+}
+main .c4_bg .contents4 ul .b {
+    background-color:#fff ;
+    float:left;
+}
+main .c4_bg .contents4 ul .c {
+    background-color: #f3c300;
+    float:left;
+}
+
+
+main .c4_bg .contents4 .content_4 {
+    display: inline-block;}
+    
+
+main .c4_bg .contents4 .content_4 li {
+    background-color: #fff;
+    border-radius:50%;
+    text-align:center;
+    width:180px; height:180px;
+    line-height:180px;
+    float:left;
+}
+main .c4_bg .contents4 .content_4 li h3 {
+    font-size:1.2rem;
+    padding-top:61px;
+    
+}
+main .c4_bg .contents4 .content_4 li p {
+    font-size:1rem;
+    padding-top:5px; } */
+
+
+
+footer {} 
+footer {background-color: rgb(255, 255, 255);
+    width:1200px;
+    margin: 0 auto;
+
+
+}
+footer .f_top {
+height:60px;
+
+}
+footer .f_top .fnb {
+    margin:23px 0 23px 20px;
+    float: left;
+}
+footer .f_top .fnb li {
+    padding-right:30px;
+    float:left;
+}
+footer .f_top .fnb :last-child {padding-right:0;}
+footer .f_top .fnb li a {}
+footer .f_top .site {
+    margin:10px;
+    float:right;    
+}
+footer .f_top .site li {
+    border:1px solid #aaa;
+    padding:10px 20px;
+    float:left;    
+}
+footer .f_top .site li:nth-child(1) {margin-right:0px;}
+footer .f_top .site li a {
+    font-size: 1.2rem;
+    letter-spacing:-0.02em;
+}
+footer .f_btm  {
+    padding:70px 0;
+    width:1200px;
+    margin:0 auto;
+
+}
+footer .f_btm address {
+    font-size:1.2rem;
+    line-height:40px;
+    letter-spacing:-0.02em;
+    margin-bottom:50px;
+
+}
+footer .f_btm p {
+    font-size:1.2rem}
