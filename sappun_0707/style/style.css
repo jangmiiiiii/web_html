@@ -1,0 +1,68 @@
+header {}
+header .h_top {background-color: beige;
+    width:1440px; height:36px;
+    margin:0 auto;}
+header .h_top .top_bg {background-color: plum;
+    text-align: center;
+}
+header .h_top .top_bg a {background-color: lightpink;}
+header .h_bottom {background-color: lightgray;
+width:1300px; height:100px;
+margin:70px auto;}
+header .h_bottom h1 {background-color: lightgreen;}
+header .h_bottom h1 a {}
+header .h_bottom h1 a img {}
+header .h_bottom .gnb {background-color: lightgoldenrodyellow;}
+header .h_bottom .gnb .gnb_1 {background-color: lightsalmon;}
+header .h_bottom .gnb .gnb_1 a {background-color: yellow;}
+header .h_bottom .gnb .gnb_1 a img {background-color: orange;}
+header .h_bottom .gnb .gnb_1 a span {}
+header .h_bottom .gnb .gnb_2 {background-color: lightskyblue;}
+header .h_bottom .gnb .gnb_2 a {}
+header .h_bottom .gnb .gnb_2 a img {}
+header .h_bottom .gnb a {}
+header .h_bottom .gnb a img {}
+header nav {background-color: aquamarine;}
+header nav ul {}
+header nav ul li {}
+header nav ul li a {background-color: lightcoral;}
+header .snb {}
+header .snb ul {}
+header .snb ul li {}
+header .snb ul li a {background-color: palegoldenrod;}
+header .snb ul li a img {}
+main {background-color:rgb(71, 194, 97);}
+main .bnr_1 {background-color: rgb(242, 227, 178);}
+main .bnr_1 a {background-color: rgb(132, 119, 251);}
+main .bnr_1 a img {}
+main .bnr_2 {background-color: rgb(161, 147, 112);}
+main .bnr_2 a {}
+main .bnr_2 a img {}
+main .weekly_best {background-color: lightpink;}
+main .weekly_best .title {}
+main .weekly_best .title h2 {background-color: rgb(220, 73, 73);}
+main .weekly_best .products {background-color: bisque;}
+main .weekly_best .products .best {}
+main .weekly_best .products .best a {}
+main .weekly_best .products .best a img {}
+main .weekly_best .products .best .title_price {}
+main .weekly_best .products .best .title_price h2 {background-color: rgb(143, 143, 208);}
+main .weekly_best .products .best .title_price p {background-color: lightcyan;}
+main .weekly_best .products .best .title_price p em {}
+main .weekly_best .products .best .size_reivew {}
+main .weekly_best .products .best .size_reivew p {}
+main .weekly_best .products .best .size_reivew p span {}
+main .weekly_best .products .best .best_btm {}
+main .weekly_best .products .best .best_btm p {}
+main .bnr_btm {}
+main .bnr_btm img {}
+main .bnr_btm h3 {}
+main .bnr_btm p {}
+main .bnr_btm p a {}
+footer {}
+footer .f_top {}
+footer .f_top .fnb {}
+footer .f_top .fnb li {}
+footer .f_top .fnb li a {}
+footer .f_btm {}
+footer .f_btm address {}
