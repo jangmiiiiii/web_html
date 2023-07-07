@@ -1,67 +1,226 @@
+/* popup */
+#top {
+    position:fixed; right:50px; bottom:50px;
+    width:50px; height:50x;
+    }
+#top img {width:100%}
+/* all layout */
+header,
+main .visual, 
+main .service,
+main .brn_bg .bnr,
+main .board,
+main .imformation,
+main .news,
+footer
+{
+    background-color: rgb(218, 228, 247);
+    width:1152px; margin:0 auto;
+}
+/* header */
 header {}
 /* header-h top */
-header #h_top {}
-header #h_top .left {}
-header #h_top .left h1 {}
+header #h_top {
+    background-color: lightgoldenrodyellow;
+    height: 48px;}
+header #h_top .left {
+    background-color: lightpink;
+    float:left;
+}
+header #h_top .left h1 {
+    background-color: aqua;
+    float:left; padding-top:10px;
+    width:110px; height:28px;}
 header #h_top .left h1 a {}
-header #h_top .left h1 a img {}
-header #h_top .left nav {}
+header #h_top .left h1 a img {
+    width:100%; /* 부모크기 따라가기 */
+}
+header #h_top .left nav {
+    float:left;
+}
 header #h_top .left nav ul {}
-header #h_top .left nav ul li {}
-header #h_top .left nav ul li a {}
-header #h_top .right {}
-header #h_top .right li {}
-header #h_top .right  li a {}
+header #h_top .left nav ul li {
+    float:left;
+    margin-left:20px;
+}
+header #h_top .left nav ul li a {
+    line-height:48px;
+    letter-spacing:-0.02em;
+}
+header #h_top .right {
+    background-color: aquamarine;
+    float:right;
+}
+header #h_top .right li {
+    background-color: lightgreen;
+    float:left;
+    margin-left: 20px;
+}
+header #h_top .right li:nth-child(1) {margin-left:0;}
+header #h_top .right  li a {
+    line-height:48px;
+    letter-spacing:-0.02em;
+}
 /* header-h btm */
-header #h_btm {}
-header #h_btm h1 {}
+header #h_btm {background-color: lightcoral;
+    height: 119px;
+}
+header #h_btm h1 {background-color: aqua;
+    float:left; width:150px; height:28px;
+    margin-top:45.5px;
+}
 header #h_btm h1 a {}
-header #h_btm h1 a img {}
-header #h_btm .search_frm {}
-header #h_btm .search_frm fieldset {}
-header #h_btm .search_frm fieldset legend {}
-header #h_btm .search_frm fieldset input {}
-header #h_btm .search_frm fieldset #search_btn {}
-header #h_btm .search_frm fieldset #search_btn img {}
-header #h_btm .h_btm_r {}
-header #h_btm .h_btm_r .langfrm {}
-header #h_btm .h_btm_r .langfrm fieldset {}
-header #h_btm .h_btm_r .langfrm fieldset legend {}
-header #h_btm .h_btm_r .langfrm fieldset select {}
-header #h_btm .h_btm_r .langfrm fieldset select option {}
-header #h_btm .h_btm_r .langfrm fieldset #go {}
-header #h_btm .h_btm_r .weather {}
+header #h_btm h1 a img {width:100%}
+header #h_btm #search_frm {background-color: wheat;
+    float:left;
+    width:369px; height:46px;
+    border:2px solid #1e6cb3;
+    padding:10px 20px 0 ;
+    margin:36px 0 0 230px;
+
+
+}
+header #h_btm #search_frm fieldset {border:0;
+} /* 가운데 선 없애줌 */
+header #h_btm #search_frm fieldset legend {display:none;
+    
+}
+header #h_btm #search_frm fieldset input {
+    float:left;
+    width:calc(100% - 20px);
+}
+header #h_btm #search_frm fieldset input::placeholder {
+    letter-spacing:-0.02em; color:#1e6cb3;
+}
+header #h_btm #search_frm fieldset #search_btn {
+    float:right;
+    border:0; background:none;
+    width:20px; height: 20px;
+    cursor:pointer;
+}
+header #h_btm #search_frm fieldset #search_btn img {width:100%;}
+header #h_btm .h_btm_r {background-color: darkgoldenrod;
+    float:right; margin-top:18px;
+}
+header #h_btm .h_btm_r #langfrm {
+    text-align: right;
+}
+header #h_btm .h_btm_r #langfrm fieldset {border:0;
+}
+header #h_btm .h_btm_r #langfrm fieldset legend {
+    display:none;
+}
+header #h_btm .h_btm_r #langfrm fieldset select {
+    font-size:0.813rem; letter-spacing: -0.02em;
+    width:93px; padding:5px 0;
+    border:1px solid #1e6cb3;
+}
+header #h_btm .h_btm_r #langfrm fieldset select option {
+
+}
+header #h_btm .h_btm_r #langfrm fieldset #lang_btn {
+    background-color:#1e6cb3; color:#fff;
+    width:29px; height:29px;
+    border:0; cursor:pointer;
+}
+header #h_btm .h_btm_r .weather {
+}
 header #h_btm .h_btm_r .weather .current_weather {}
-header #h_btm .h_btm_r .weather .current_weather em {}
+header #h_btm .h_btm_r .weather .current_weather em {
+    font-size:2.063rem; font-weight: 500; letter-spacing:-0.02rm;
+}
 header #h_btm .h_btm_r .weather .current_dust {}
 /* main */
 main {}
 /* main-1광고배너*/
-main .visual {}
-main .visual .left {}
-main .visual .left img {}
-main .visual .left .close {}
-main .visual .right {}
-main .visual .right .covid {}
-main .visual .right .covid .date {}
-main .visual .right .covid .data {}
-main .visual .right .covid .data1 {}
-main .visual .right .covid .data2 {}
-main .visual .right .covid .data3 {}
-main .visual .right .covid .data4 {}
-main .visual .right .covid .data5 {}
+main .visual {background-color:palegoldenrod;
+overflow: hidden;}
+main .visual .left {background-color:aliceblue;
+    width:770px; height: 350px; 
+    position:relative;/*  겹치는대상의 부모기준 */
+    float:left;
+
+}
+main .visual .left img {
+
+}
+main .visual .left .close {
+    letter-spacing:-0.02em; font-weight:500; padding:10px; border-radius:5px;
+    background-color: #1e6cb3; color:#fff;
+    position:absolute; /* 겹치는대상 */
+right:10px; bottom:10px;}
+main .visual .right {background-color: lightgreen;
+width:360px; float:right
+}
+main .visual .right .covid {
+    position:relative; display:block;/* 영역에서 크기인식됨 */
+    width:360px; height:230px; margin-bottom: 10px;
+}
+main .visual .right .covid span {
+    position:absolute;
+}
+main .visual .right .covid .date {
+right:12px; top:23px;} 
+main .visual .right .covid .data {
+}
+main .visual .right .covid .data1 {
+    top:85px; left:80px;}
+main .visual .right .covid .data2 {
+    top:85px; right:87px; }
+main .visual .right .covid .data3 {
+    left:60px; bottom:57px;}
+main .visual .right .covid .data4 {
+    right:161px; bottom:57px;}
+main .visual .right .covid .data5 {
+    right:52px; bottom:57px;
+}
 main .visual .right .covid img {}
-main .visual .right .traffic {}
+main .visual .right .traffic {
+}
 main .visual .right .traffic img {}
+/* 주요서비스~새소식 제목 디자인 그룹 */
+/* 정리후 */
+main section .title {background-color: purple;}
+main section .title h2 {}
+main section .title .site {}
+main section .title .more {}
+/* 정리전 */
+/* main .board .event .tltle {}
+main .board .event .title h2 {}
+main .board .event .title .more {}
+main .board .festival .title {}
+main .board .festival .title h2 {}
+main .board .festival .title .more {}
+main .board .service .title {}
+main .board .service .title h2 {}
+main .imformation .title {}
+main .imformation .title h2 {}
+main .news .title {}
+main .news .title h2 {}
+main .service .title {}
+main .service .title h2 {}
+main .service .title .site  {} */
+
+
 /* main-2주요서비스*/
 main .service {}
 main .service .title {}
 main .service .title h2 {}
 main .service .title .site  {}
-main .service .contents {}
-main .service .contents a {}
-main .service .contents a img {}
-main .service .contents a span {}
+
+main .service .contents {background-color: aquamarine;
+
+}
+main .service .contents a {background-color: lightgrey;
+
+
+}
+main .service .contents a img {
+
+}
+main .service .contents a span {
+
+}
 /* main-3배너*/
 main .bnr_bg {}
 main .bnr_bg .bnr {}
@@ -97,13 +256,13 @@ main .board .service .title h2 {}
 main .board .contents {}
 main .board .contents a {}
 /* main-5분야정보*/
-main .impormation {}
-main .impormation .title {}
-main .impormation .title h2 {}
-main .impormation .contents {}
-main .impormation .contents a {}
-main .impormation .contents a img {}
-main .impormation .contents a span {}
+main .imformation {}
+main .imformation .title {}
+main .imformation .title h2 {}
+main .imformation .contents {}
+main .imformation .contents a {}
+main .imformation .contents a img {}
+main .imformation .contents a span {}
 /* main-6새소식*/
 main .news {}
 main .news .title {}
@@ -120,7 +279,6 @@ footer .fnb .fnb_left a {}
 footer .fnb .fnb_right {}
 footer .fnb .fnb_right a {}
 /* footer=f btm */
-footer {}
 footer .btm {}
 footer .btm .btm_left {}
 footer .btm .btm_left p {}
@@ -129,4 +287,4 @@ footer .btm .btm_left address {}
 footer .btm .btm_left address a {}
 footer .btm .btm_right {}
 footer .btm .btm_right a {}
-footer .btm .btm_right a img {}
+footer .btm .btm_right a img {} 

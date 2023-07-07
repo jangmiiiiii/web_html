@@ -10,10 +10,13 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <!-- 외부스타일 -->
-    <link href="./style/reset.css" rel="styelsheet">
-    <link href="./style/style.css" rel="styelsheet">
+    <link href="./style/reset.css" rel="stylesheet">
+    <link href="./style/style.css" rel="stylesheet">
 </head>
 <body>
+    <!-- 팝업요소 -->
+    <a href="#" id="top"><img src="./images/icon_controls/btn_top.png" alt="위로">
+    </a>
     <header>
         <div id="h_top">
             <div class="left">
@@ -49,13 +52,13 @@
             <div class="h_btm_r">
                 <form action="#" method="get" id="langfrm">
                     <fieldset>
-                        <legend>언어선택양식</legend>
+                        <legend></legend>
                         <select name="lang_select">
                             <option value="english">ENGLISH</option>
                             <option value="japanese">JAPANESE</option>
                             <option value="chinese">Chinese</option>
                         </select>
-                        <button type="submit" id="go">GO</button>
+                        <button type="submit" id="lang_btn">GO</button>
                     </fieldset>
                 </form>
                 <div class="weather">
@@ -73,7 +76,7 @@
             </div>
             <div class="right">
                 <a herf="#" class="covid">
-                    <span class="date"></span>
+                    <span class="date">20.08.18.00시 기준</span>
                     <span class="data data1" title="확진자">2,209</span><!-- 공동 데이터 . 개인 데이터로 구분 -->
                     <span class="data data2" title="추가확진자">132</span>
                     <span class="data data3" title="퇴원">1,573</span>
@@ -234,7 +237,7 @@
                 <a href="#"><img src="./images/icon_set/shorcut_icon_set_15.png" alt=""><span>행정</span></a>
             </div>
         </section>
-        <selction class="news">
+        <section class="news">
             <div class="title"><h2>새소식</h2></div>
             <div class="contents">
                 <a href="#">
@@ -277,7 +280,7 @@
                         도</span>
                 </a>
             </div>
-        </selction>
+        </section>
     </main>
     <footer>
         <div class="fnb">
