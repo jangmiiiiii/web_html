@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>test</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <style>
+        html, body {
+            background: aqua url(./images/news_img08.jpg) no-repeat fixed right;
+        }
+        #bg {background-color: rgba(255,255,255,0.8);
+        position: relative;}
+        #bg p {
+            background:yellow url(./images/news_img02.jpg) no-repeat ;
+            height:200px; width:400px;
+            border:5px solid #000;
+            position:relative;
+        }
+        #bg p:nth-child(2) {border-color: red;
+            left:100px; position:relative;
+        }
+        #bg p:nth-child(3) {background-repeat: repeat-x;
+            position:absolute; right:0; bottom:0;
+            }
+
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <h1>Vs cod Emmet</h1>
+    <p><em>부모>자식 </em></p>
+    <p><span></span><span></span></p> <!-- p*2 -->
+    <p>동일관계(형제)의 요소를 2개 이상 제작하고 싶을땐 곱하기를 붙여서 Emmet 기능을 실행한다.</p>
+    <ul><!-- ul>li*4>a -->
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+    <div> <!-- div>p*6 -->
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <header><!-- header>h1+nav+p -->
+        <h1></h1>
+        <nav></nav>
+        <p></p>
+    </header>
+    <div class="test"> <!-- div.test>p>em -->
+        <p><em></em></p>
+    </div>
+    <div id="box"> <!-- div#box>section.contents>h1+p -->
+        <section class="contents">
+            <h1></h1>
+            <p></p>
+        </section>
+    </div>
+    <img src="./images/banner_01.jpg" alt="서울시청">
+    <video src="#"></video>
+    <form action="">form</form>
+    <form action="#" method="post">form:post</form>
+    <input type="text">
+    <button></button>
+    <button type="submit">button:submit</button>
+    <!-- label>input:checkbox -->
+    <label for=""><input type="checkbox" name="그룹이름" id="" 필요시 value작성></label>
+    table>thead>tr>th*2
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>tbody>tr>td*2
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- div.right>form:post#lang>fieldset>legend+select+button -->
+    <div class="right">
+        <form action="" method="post" id="lang">
+            <fieldset>
+                <legend></legend>
+                <select name="" id=""></select>
+                <button></button>
+            </fieldset>
+        </form>
+        <!-- div.weather>p.current_weather+p.dust -->
+        <div class="weather">
+            <p class="current_weather"></p>
+            <p class="dust"></p>
+        </div>
+    </div>  
+    <!-- div.right>form#langfrm>fieldset>legend+select+option*3
+    <div class="right">
+        <form action="" id="langfrm">
+            <fieldset>
+                <legend></legend>
+                <select name="" id=""></select>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <! button:submit -->
+                <!-- <button type="submit"></button>
+            </fieldset>
+        </form>
+        div.weather>p+p>em
+        <div class="weather">
+            <p></p>
+            <p><em></em></p>
+        </div> -->
+        
+    <!-- </div> --> 
+</body>
+</html>
