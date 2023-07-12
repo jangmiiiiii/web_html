@@ -1,0 +1,131 @@
+/* rgb(95 3 128) */
+/* 1050px */
+/* height - 42 35 63 56 */
+/* all layout */
+.top_bnr_bg .top_bnr, header {
+    margin:0 auto ; width:1050px;}
+    /* header-sprite 공통그룹선택자 */
+    header .middle .logo h1 , 
+    header .middle #searchfrm fieldset #search-btn ,
+    header .middle .lnb a , 
+    header .btm .all_menu menu {
+        background:lightblue  url(../image/kurly_img/icon_set2.png) ;
+            width: 36px; height: 36px;
+            display: inline-block;
+            text-indent: -9999px;
+
+    }
+    /* header */
+.top_bnr_bg {background: rgb(95 3 128);}
+.top_bnr_bg .top_bnr {
+    height: 42px; /* 1. 높이주기 */
+    display: flex; /* 2. flex값으로 정렬 */
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;/* 2!! */
+}
+.top_bnr_bg .top_bnr .adver {
+    color: #fff;
+}
+.top_bnr_bg .top_bnr .adver em {
+    font-weight: bold;
+}
+.top_bnr_bg .top_bnr .close {
+    position: absolute; right:0;/* 1!! -> 부모의 오른쪽으로 가라는 명령 */
+    /* 태그에서 뿐만 아니라 그 태그에 같은 포지션을 줘야 인식한다. 안그러면 바디로 들어감
+    close의 부모한테도 줘야함---> top_bnr이 close의 부모 */
+}
+.top_bnr_bg .top_bnr .close .fa-xmark {
+
+}
+header {
+ /*    background-color: lightgreen; */
+}
+header .user_lnb { background-color: antiquewhite;
+    height: 35px; /* 1 */
+    display: flex; /* 2 . flex 로 정렬 */
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+header .user_lnb .join {}
+header .user_lnb .login {}
+header .user_lnb .customer_service {}
+header .middle {/* background-color: lightcoral; */
+    height: 63px; /* 1 */
+    display: flex; /* 2 . flex 로 정렬 */
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .middle .logo { /* 3. 로고들 정렬하려면 정렬대상 부모인 logo에게  */
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+header .middle .logo h1 {
+    background-position: -0 -158px;
+    width: 82px; height: 42px;
+}
+header .middle .logo .market {}
+header .middle .logo .beauty {}
+header .middle #searchfrm {
+    border:2px solid rgb(95 3 128);
+    border-radius: 5px;
+    width:350px; 
+
+
+}
+header .middle #searchfrm fieldset {
+display: flex;
+flex-flow: row nowrap;
+justify-content:space-between;
+
+padding: 5px 10px;
+
+}
+header .middle #searchfrm fieldset #search-text {
+
+
+
+}
+header .middle #searchfrm fieldset #search-btn {
+    background-position: -0 -122px;
+
+
+}
+header .middle .lnb {
+    flex-flow: row nowrap;
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+}
+header .middle .lnb a {}
+header .middle .lnb .map {
+    background-position: -0 -86px;
+}
+header .middle .lnb .like {
+    background-position: -0 -50px;
+}
+header .middle .lnb .cart {
+    background-position: -0 -14px;
+}
+header .btm {background-color: lightblue; 
+    height: 56px; /* 1 */
+    display: flex; /* 2 . flex 로 정렬 */
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .btm .all_menu {}
+header .btm .all_menu menu {}
+header .btm .all_menu span {}
+header .btm nav {}
+header .btm nav a {}
+header .btm .delivery_info {}
+header .btm .delivery_info em {}
+header .btm .delivery_info em .fa-circle {
+    font-size: 1px;
+}
+header .btm .delivery_info span {}
