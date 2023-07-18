@@ -1,0 +1,325 @@
+/* 1.landing. css */
+/* 1. title */
+.title_bg { 
+    background: url(../images/bg1.png)
+    no-repeat fixed center 70%; /* 배경 고정값 */
+    background-size: cover; /* 화면 확대 축소해도 배경이미지 고정 */
+    position: relative;
+}
+
+.title_bg::after { /*배경화면 그라디언트 색 추가 */
+    content:''; /* 넣을게 없으면 빈 따옴표 넣기 */
+    display: block; width: 100%;/* block을 쓰면 기본이 100%값이다 */ height: 800px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.6967169943820224) 0%, rgba(0,0,0,0.7) 100%);
+    position: absolute; left: 0; top: 0; z-index: 90;
+    /* absolute 적용 시 기본 block은 inline처럼 변한다 한번더 width:100%; 적어주기 */
+}
+.title_bg #snow { /* 눈내리는 효과 */
+    width:100%; height: 800px;
+    z-index:200; position:absolute; top: 0; left: 0;
+}
+.title_bg .title {
+    width: 1200px; height: 800px; /* 1. 전체영역 너비 100%는 작성 x,  높이는 작성해주기 */
+    margin:0 auto;
+    display: flex; flex-flow: column nowrap;
+    align-items: center ;
+    z-index:100; position: relative;
+    /* afer와 title의 순서를 바꾸고 싶다 = 배경색을 아래로 보내고 싶다
+        내가 원하는 대상을 밑 or 위로 보내고싶을때
+        {z-index:;} 사용!! -1~999 까지 사용 가능
+        z-index 전에 먼저 사용해야할 속성이 있다 -> 
+        선행 속성이 있어야 한다 -=> position :relative(현재속성);
+    */
+    
+}
+
+.title_bg .title .logo {
+    align-self: flex-start; /* 2. title의 자식. 따로 효과줄때 사용 */
+}
+.title_bg .title .logo img {
+}
+
+
+.title_bg .title h1 {
+    color: #fff;
+    font-size: 3.157em;
+    text-align: center;
+    margin-bottom: 36px;
+    margin-top: 217px;
+    font-weight: 500;
+    line-height: 100px;
+}
+.title_bg .title h1 em {
+    font-size: 100%;
+    font-weight: 700;
+}
+.title_bg .title .sponsor_btn {
+    background: rgb(255,147,0);
+background: linear-gradient(90deg, rgba(255,147,0,1) 0%, rgba(255,114,0,1) 100%, rgba(0,0,0,0.7) 100%);
+    padding: 30px 70px;
+    border-radius:50px;
+}
+.title_bg .title .sponsor_btn span {
+    color: #fff;
+    font-size:1.2rem;
+    margin: 30px 0;
+    
+}
+.title_bg .title .sponsor_btn img {
+    margin: 0 auto;
+}
+.title_bg .title .sponsor_qa {
+    align-self: flex-end;
+    background:#222 ;
+    padding: 10px 20px;
+    border-radius:20px;
+}
+.title_bg .title .sponsor_qa img {
+    margin: -12px  5px;
+    padding:10px 10px;
+
+}
+.title_bg .title .sponsor_qa span {
+    color:#fff ;
+    margin:0 auto;
+}
+/* 2행 quiz 영역 */
+.quiz_bg { background:url(../images/quiz_bg.png) 
+    no-repeat fixed center;
+    background-size: cover;
+
+}
+.quiz_bg .quiz {
+    width: 1200px; margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 584px;
+    padding: 100px 0px;
+}
+
+.quiz_bg .quiz .left {
+width:488px; 
+display: flex;
+flex-flow: column nowrap;
+justify-content: space-between;
+}
+.quiz_bg .quiz .left h2 {
+    font-size: 3.157em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.quiz_bg .quiz .left h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.333em;
+    margin-bottom: 30px;
+}
+.quiz_bg .quiz .left #quiz_frm {}
+.quiz_bg .quiz .left #quiz_frm fieldset {}
+.quiz_bg .quiz .left #quiz_frm fieldset ul {text-align: center;}
+.quiz_bg .quiz .left #quiz_frm fieldset ul li {margin-bottom: 10px;}
+.quiz_bg .quiz .left #quiz_frm fieldset ul li label {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.quiz_bg .quiz .left #quiz_frm fieldset ul li label input {
+    appearance: none; /* form input 요소 숨기기 */
+}
+.quiz_bg .quiz .left #quiz_frm fieldset ul li span {
+    background: url(../images/quiz_uncheck.png) no-repeat; 
+    padding-left: 34px ;
+    color: #fff;
+    
+    font-size: 1.333rem;
+}
+/* 상태선택자 (radio check될 경우 span의 이미지 변경하기) */
+.quiz_bg .quiz .left #quiz_frm fieldset ul li label input:checked+span /* input:cheked= input을 체크했을때~ 라는뜻 */ {
+    background: url(../images/quiz_check.png) no-repeat; 
+} 
+.quiz_bg .quiz .left #quiz_frm fieldset #answer_btn {
+    background: #222;
+    color: #fff;
+    padding: 20px 170px;
+    border-radius:50px;
+    font-size: 1.333em;
+}
+.quiz_bg .quiz .right {
+    width: 550px;
+    text-align: center;
+}
+.quiz_bg .quiz .right h2 {
+    background:#ff7200 ; 
+    /* padding:25.5px 0; */
+    font-size:1.333rem;
+    height: 70px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.quiz_bg .quiz .right h2 img {margin-right: 10px;}
+.quiz_bg .quiz .right h2 span {
+    color: #fff;
+}
+.quiz_bg .quiz .right .content {
+    background: #fff;
+    font-size: 1.333rem;
+    border-radius: 0 0 20px 20px;
+    padding: 70px 0;
+
+}
+.quiz_bg .quiz .right .content>* {
+    font-weight: 700;
+}
+.quiz_bg .quiz .right .content em {
+    font-size: 5rem;
+    color:#ff7200 ;
+    
+}
+.quiz_bg .quiz .right .content span:nth-child(2) {color:#ff7200 ;}
+.quiz_bg .quiz .right .content span {
+    font-size: 3.157rem;
+}
+.quiz_bg .quiz .right .update {
+    color: #fff;
+    margin-top: 30px;
+}
+/* 3. video */
+.video_bg {
+    background: url(../images/video_bg.png) no-repeat center;
+    background-size: cover; 
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 100px 0;
+}
+.video_bg h2{
+    font-size: 3.157rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+    line-height: 70px;
+}
+.video_bg iframe {
+    width: 800px; height: 500px;
+    margin-bottom: 50px;
+}
+.video_bg .sponsor_btn {
+    background: linear-gradient(90deg, rgba(255,147,0,1) 0%, rgba(255,114,0,1) 100%, rgba(0,0,0,0.7) 100%);
+    border-radius: 50px;
+    padding: 30px 70px;
+}
+.video_bg .sponsor_btn span {
+    font-size: 1.777rem;
+    color: #fff ;a
+    font-weight: 500;
+}
+.video_bg .sponsor_btn span img {}
+/* 4. 50% 감소 */
+.bg50 {
+    background: url(../images/quiz_bg.png) no-repeat fixed center;
+    background-size: cover;
+}
+.bg50 .wrap50 {
+    width: 1200px; margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 0;
+}
+.bg50 .wrap50 h1 {
+    color: #fff;
+    font-size: 3.157rem ;
+    font-weight: 700;
+    line-height: 90px;
+}
+.bg50 .wrap50 h1 span {
+    font-size: 3.157rem ;
+    background: #fff;
+    color:#000;
+    font-weight: 700;
+}
+.bg50 .wrap50 .contents {
+    margin: 50px 0;
+    line-height: 50px;
+    letter-spacing: -0.02rem;
+}
+/* .bg50 .wrap50 p::after {
+    width: 130px; height: 90px;
+    color: #fff;
+} */
+.bg50 .wrap50 p {
+    color: #fff;
+    font-size: 1.777rem;
+}
+.bg50 .wrap50 p img {
+    width: 1200px; height: 600px;
+}
+/* 5. 28조/27cm/332만명 */
+.warming_bg {}
+.warming_bg .warming {
+    width: 1200px; margin: 0 auto;
+    text-align: center;
+    padding: 100px 0;
+}
+.warming_bg .warming h2 {
+    font-size: 3.157rem;
+    font-weight: 700;
+    margin-bottom: 90px;
+}
+.warming_bg .warming .contents {
+    font-size: 1.777rem;
+    margin-bottom: 90px;
+    line-height:50px;
+    letter-spacing: -0.02em;
+}
+.warming_bg .warming ul {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.warming_bg .warming ul li:last-child {margin-right: 0;}
+.warming_bg .warming ul li {
+    background: yellow;
+    width: calc(33.33% / 40px / 3);
+    margin-right: 20px;
+}
+.warming_bg .warming ul li .top {
+    height: 300px;
+    background-position: center bottom;
+    background-size: cover;
+}
+.warming_bg .warming ul li:nth-child(1) .top {
+    background-image: url(../images/28.png);
+}
+.warming_bg .warming ul li:nth-child(2) .top {
+    background-image: url(../images/27.png);
+}
+.warming_bg .warming ul li:nth-child(3) .top {
+    background-image: url(../images/28.png); /* background 에서 이미지가 안나타나면 뒤에 추가 글을 더 적어줘서 디테일 추가해준다 그러면 뜸! */
+}
+
+.warming_bg .warming ul li .top h3 {
+    font-size: 3.157em;
+    font-weight: 600;
+    color: #fff;
+    padding-top:30px ;
+}
+.warming_bg .warming ul li .top p {
+    font-size: 1.333rem;
+    padding-top: 30px;
+    color: #fff;
+}
+.warming_bg .warming ul .list_contents {
+    padding: 30px 25.5px;
+    line-height:30px ;
+    width: 336px;
+}
