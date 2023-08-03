@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>자바스크립트 시작</title>
+    <script>
+        /* 내부 스크립트 위치 (head) */
+    </script>
+</head>
+<body>
+    <!-- 태그 작성위치 -->
+    <p>1+1</p>
+    <script>
+        /* 내부 스크립트 위치 (body) */
+        // 한줄주석
+        /* 여러 줄 주석 */
+        // 객체지향언어 = 자바스크립트
+        // var 변수명 대입연산자 대입데이터
+        var a = 10;
+        var b = 20;
+        console.log(a); // Console창에 변수를 출력한다.
+        document.write(b); // 화면에 변수를 출력한다.
+        // 객체(콘솔) 속성(x) 이벤트(x) 메소드(변수출력)
+        // 객체.속성
+        // 객체.메소드(실행값)
+        // 객체.속성.메소드()
+        // --------------------------------------------------
+        // 데이터타입 = String(문자) Numberm(숫자)
+        console.log('1+1'); //따옴표 묶인 데이터 = 문자 / 계산 X
+        console.log(1+1); //계산 O = 2
+        //2개 이상 데이터 묶어서 사용하기
+        //숫자+숫자=숫자
+        //문자+문자=문자
+        //문자+숫자=문자
+        // --------------------------------------------------
+        var box1 = 10;
+        var box2 = '10';
+        var box3 = 20;
+        var box4 = 1;
+        console.log(box1,box2,box3,box4)
+        console.log(box1+box2+box3+box4)
+        console.log(typeof (box1+box3))
+        document.write(typeof (box1+box3))
+        console.log('box1='+box1)
+        console.log('box2='+box2)
+        console.log('box3='+box3)
+        console.log('box4='+box4)
+        console.log('box1+box3='+(box1+box3))
+        //box1+box3+box4 = 31
+        console.log('box1+box3+box4='+(box1+box3+box4))
+        //box1+box2 = 1010
+        console.log('box1+box2='+box1+box2)
+        //box3+box4 = 21
+        console.log('box3+box4='+(box3+box4))
+        //2*1=2
+        console.log('2*1='+(2*1))
+        //2*2=4
+        console.log('2*2='+(2*2))
+        console.log('------------------------')
+        // --------------------------------------------------
+        var str1 = '자바스크립트';
+        console.log(typeof(str1)); //string
+        //length 문자열 길이 속성
+        console.log(str1.length)
+        //str1.length : 6
+        console.log('str1.length:'+str1.length)
+</script>
+</body>
+</html>

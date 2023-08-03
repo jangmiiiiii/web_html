@@ -1,0 +1,88 @@
+<!-- 1007-if-idpw.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js6 로그인(보안인증 추가 2번오류시 실행)</title>
+    <style>
+        * {margin:0; padding:0; box-sizing:border-box; line-height:1.0;}
+        body, html {background:#f1f1f1;}
+        .login_box {
+            background:#fff; width:510px; margin:50px auto; padding:20px;
+            border-radius:10px; border:1px solid #ccc;
+        }
+        .login_box h1 {text-align:center; color:#03c75a; padding:20px 0;}
+        .login_box #loginFrm {}
+        .login_box #loginFrm fieldset {border:0;}
+        .login_box #loginFrm fieldset input {
+            width:100%; border:1px solid #aaa; padding:10px 15px;
+        }
+        .login_box #loginFrm fieldset input[type^=t] {}
+        .login_box #loginFrm fieldset input[type^=p] {margin-top:10px;}
+        .login_box #loginFrm fieldset #error_result {
+            padding:20px 0; color:#f00; font-size:0.875rem; line-height:1.5;
+        }
+        .login_box #loginFrm fieldset #login_btn {
+            background:#03c75a; color:#fff;
+            width:100%; cursor:pointer; padding:20px 0; border:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="login_box">
+        <h1>NAVER</h1>
+        <form action="#" id="loginFrm" method="post">
+            <fieldset>
+                <legend style="display:none;">로그인양식</legend>
+                <input type="text" id="user_id" name="user_id" placeholder="아이디">
+                <input type="password" id="user_pw" name="user_pw" placeholder="비밀번호">
+                <p id="error_result">결과 나오는 위치</p>
+                <button type="button" id="login_btn">로그인</button>
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        // 네이버 로그인 조건
+        /* 
+            1. 아이디 안적고 비밀번호 적은 후 로그인 버튼 클릭시 = 아이디 오류
+            2. 아이디 적고 비밀번호 안적고 로그인 버튼 클릭 시 = 비밀번호 오류
+            3. 아이디, 비밀번호 모두 안적고 로그인 버튼 클릭시 = 아이디, 비밀번호 입력하세요 메세지
+            4. 아이디, 비밀번호 모두 입력하고 로그인 버튼 클릭시 = 로그인 성공
+        */
+        
+            // 아이디 안적고 로그인 누를 시 '아이디를 입력하세요'출력
+        const user_id = document.querySelector('#user_id')
+        const user_pw = document.querySelector('#user_pw')
+        const error_result = document.querySelector('#error_result')
+        const login_btn = document.querySelector('#login_btn')
+        console.log(user_id, error_result, login_btn)
+        login_btn.addEventListener('click',function(){
+        
+            if(user_id === '' && user_pw === '' ){
+                error_result.innerHTML = '아이디, 비밀번호 입력하세요' //아이디, 비번 입력하세요(3)
+            }else if(user_id.value === ''){
+                error_result.innerHTML = '아이디 오류'//아이디, 입력하세요(1)
+            }else if(user_pw.value === ''){
+                error_result.innerHTML = '비밀번호 오류'//비밀번호 입력하세요 (2)
+            }else {error_result.innerHTML = '로그인성공'
+                //로그인 성공
+            }
+            /*             if(user_id.value === ''){
+                            error_result.innerHTML = '아이디를 입력하세요' //input안의 값 = value  / 대입연산자 vs 확인 중 확인 해야한다 .-> 값이 있나없나 확인 
+                            //user_id.value는 문자이므로 '' 쓰기 / '' 는 공백을 의미
+                        } */
+/*             if(user_id.value === '' || user_pw === 'a1234'){
+                error_result.innerHTML = '아이디 오류'
+            }else if(user_id === 'admit' || user_pw === ''){
+                error_result.innerHTML = '비밀번호 오류'
+            }else if(user_id === '' && user_pw === '' ){
+                error_result.innerHTML = '아이디, 비밀번호 입력하세요'
+            }else (user_id === 'admit' && user_pw === 'a1234')
+                error_result.innerHTML = '로그인성공' */  //안적고 에 관한 값만 적으면 됨 . 나는 아이디랑 패스워드 값을 줬음 그럴필요없음.
+        })
+
+    </script>
+</body>
+</html>

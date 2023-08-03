@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js4 구매수량제한</title>
+</head>
+<body>
+    <p><img src="images/ame.jpg" alt="" style="width:100px;"></p>
+    <p>아메리카노</p>
+    <p><button type="button" id="order">주문하기</button></p>
+
+    <p style="margin-top:50px;">총 수량 <span id="number">0</span>개</p>
+    <p>총 가격 <span id="result">0</span>원</p>
+    <p><button type="button" id="reset">X</button></p>
+    <!-- script 작성순서 -->
+    <!--
+        1. 주문하기 버튼 1번 클릭할 때마다 수량 증가하기
+        2. 수량에 따른 가격 출력하기 (1잔당 4800원)
+        3. x버든 클릭 시 모든 수량, 가격 0원으로 초기화하기
+    -->
+    <script>
+        const order = document.querySelector('#order') //주문버튼
+        const number = document.querySelector('#number') //수량표시
+        const result = document.querySelector('#result') //가격표시
+        const reset = document.querySelector ('#reset') //초기화버튼
+        let num = 0//문제1. 수량 데이터변수 ,  데이터가 되는 값은 변수로 작성
+        let price = 4800 //문제2. 가격데이터변수
+        let total = 0 //최종가격
+        console.log(order,number,reset,result)
+        // 1. 주문하기 버튼 1번 클릭할대마다
+        // 2. 수량에 따른 가격 출력하기 (1잔당 4800원)
+        order.addEventListener('click',function(){
+            //1-2. 수량 증가하기
+            num++ //수량 데이터 변수 1 증가
+            number.innerHTML = num //수량표시변수에 데이터 데입
+            total = price*num
+            result.innerHTML = total.toLocaleString('ko-kr') // 숫자사이에 콤마 넣는 코드
+            // result.innerHTML = price*num.toLocaleString('ko-kr') x 
+        })
+        // 3. x버든 클릭 시 모든 수량, 가격 0원으로 초기화하기
+        reset.addEventListener('click',function(){
+            num = 0 //num의 값을 0으로 초기화 시킨다.
+            number.innerHTML = num
+            result.innerHTML = 0
+        })
+    </script>
+</body>
+</html>

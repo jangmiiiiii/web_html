@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트2.변수</title>
+</head>
+<body>
+    <script>
+        
+        // 변수명 중복 불가 (생성시)
+        // 변수는 한번에 한가지 값만 담기 가능
+        // 변수명 중복했는데 오류가 안남 -> why?
+        // float, flex 와 비슷한 개념 -> 변수 선언 키워드는 var, let, const 가 있음
+        // var == vanilaJS 오래된 변수 선언 키워드
+        // let, const == ES5 2015년 이후 선언된 변수 키워드
+        // var는 중복을 시키면 중복의 문제점을 사용자에게 안알려줌 -> var의 문제점
+        // var -> let으로 바꿔보면 바로 오류남 . 오류명''a'has alredy been'
+        // var는 변수중복에러를 체크하지 못한다.
+        // let은 변수중복에러를 체크할 수 있다. -> 스스로 판단후, 고칠수있음
+        let a = 1;
+        console.log(a) //1
+        let b = 2;
+        console.log(b) //2
+        /* 위에서 아래로 읽음 console.log가 읽히는 지점-> 1. -> 1을 출력하라는 뜻
+        console은 1을 출력함 .*/
+
+        // 에러가 안나는 이유 -> let이 안들어감 . let은 처음 변수를 생성할때만 작성. 중복시엔-> 기존변수의 데이터 값을 다른대입값으로 변경하겠다라는 뜻
+        // 즉, 생성시에만 변수명 중복 불가!!
+        let c = 10;
+        console.log(c); //10
+        c = 11; //기존 변수의 데이터값 변경
+        console.log(c); //11
+
+        let year = 2023
+        document.write(year+'년도')
+        year = 2024 
+        document.write(year+'년도')
+        // ex) 달력 -> 년도앞에 변수값을 바꾸는것
+    </script>
+</body>
+</html>
